@@ -1,0 +1,14 @@
+tracking:
+  uri: "http://localhost:5000"  # URI for the MLflow tracking server
+  tracking_uri: "http://localhost:5000"  # Tracking URI for MLflow
+  experiment_name: "default"  # Default experiment name
+  artifact_location: "mlruns"  # Location for storing artifacts
+  log_level: "INFO"  # Logging level for MLflow
+  backend_store_uri: "sqlite:///mlflow.db"  # Backend store URI for MLflow
+  default_artifact_root: "artifacts"  # Default root for artifacts
+  server:
+    host: "0.0.0.0"  # Host for the MLflow server
+    port: 5000  # Port for the MLflow server
+  ui:
+    enable: true  # Enable the MLflow UI
+    port: 5001  # Port for the MLflow UI

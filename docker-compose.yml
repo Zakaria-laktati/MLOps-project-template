@@ -1,0 +1,29 @@
+services:
+  training:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.training
+    volumes:
+      - ./data:/app/data
+      - ./src:/app/src
+      - ./configs:/app/configs
+      - ./models:/app/models
+      - ./monitoring:/app/monitoring
+    environment:
+      - ENV=development
+      - PYTHONPATH=/app
+    command: ["python", "-m", "src.pipelines.training_pipeline"]
+
+  serving:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.serving
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./src:/app/src
+      - ./models:/app/models
+    environment:
+      - ENV=production
+      - PYTHONPATH=/app
+    command: ["python", "-m", "src.serving.api"]

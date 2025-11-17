@@ -1,0 +1,90 @@
+{
+  "annotations": [
+    {
+      "datasource": "prometheus",
+      "editable": true,
+      "gridPos": {
+        "h": 8,
+        "i": "0",
+        "w": 12,
+        "x": 0,
+        "y": 0
+      },
+      "id": 1,
+      "title": "Model Accuracy",
+      "type": "graph",
+      "targets": [
+        {
+          "expr": "model_accuracy_metric",
+          "interval": "",
+          "legendFormat": "{{model}}",
+          "refId": "A"
+        }
+      ],
+      "xaxis": {
+        "show": true
+      },
+      "yaxis": {
+        "show": true
+      }
+    },
+    {
+      "datasource": "prometheus",
+      "editable": true,
+      "gridPos": {
+        "h": 8,
+        "i": "1",
+        "w": 12,
+        "x": 12,
+        "y": 0
+      },
+      "id": 2,
+      "title": "Model Latency",
+      "type": "graph",
+      "targets": [
+        {
+          "expr": "model_latency_metric",
+          "interval": "",
+          "legendFormat": "{{model}}",
+          "refId": "A"
+        }
+      ],
+      "xaxis": {
+        "show": true
+      },
+      "yaxis": {
+        "show": true
+      }
+    },
+    {
+      "datasource": "prometheus",
+      "editable": true,
+      "gridPos": {
+        "h": 8,
+        "i": "2",
+        "w": 12,
+        "x": 0,
+        "y": 8
+      },
+      "id": 3,
+      "title": "Data Drift",
+      "type": "graph",
+      "targets": [
+        {
+          "expr": "data_drift_metric",
+          "interval": "",
+          "legendFormat": "{{feature}}",
+          "refId": "A"
+        }
+      ],
+      "xaxis": {
+        "show": true
+      },
+      "yaxis": {
+        "show": true
+      }
+    }
+  ],
+  "schemaVersion": 26,
+  "version": 1
+}

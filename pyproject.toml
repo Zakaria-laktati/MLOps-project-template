@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "mlops-skeleton-project"
+version = "0.1.0"
+description = "A skeleton project for MLOps using essential tools and Docker."
+authors = ["Your Name <youremail@example.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pandas = "^1.3.0"
+numpy = "^1.21.0"
+scikit-learn = "^0.24.0"
+flask = "^2.0.0"
+mlflow = "^1.19.0"
+dvc = "^2.0.0"
+pydantic = "^1.8.0"
+pytest = "^6.2.0"
+requests = "^2.25.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

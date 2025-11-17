@@ -1,0 +1,6 @@
+[core]
+    remote = local
+
+[remote "local"]
+    url = ../data/processed
+    fetch = +refs/heads/*:refs/remotes/origin/*

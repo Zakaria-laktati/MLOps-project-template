@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  training:
+    build:
+      context: ./docker
+      dockerfile: Dockerfile.training
+    volumes:
+      - ./data:/app/data
+      - ./src:/app/src
+      - ./configs:/app/configs
+    environment:
+      - ENV=training
+    command: ["python", "src/pipelines/training_pipeline.py"]
+
+  serving:
+    build:
+      context: ./docker
+      dockerfile: Dockerfile.serving
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./src:/app/src
+      - ./configs:/app/configs
+    environment:
+      - ENV=serving
+    command: ["python", "src/serving/api.py"]

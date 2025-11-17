@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mlops-skeleton-project
+  labels:
+    app: mlops-skeleton-project
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: mlops-skeleton-project
+  template:
+    metadata:
+      labels:
+        app: mlops-skeleton-project
+    spec:
+      containers:
+      - name: mlops-skeleton-project
+        image: your-docker-image:latest
+        ports:
+        - containerPort: 80
+        env:
+        - name: ENVIRONMENT
+          value: "production"
+        - name: MODEL_PATH
+          value: "/path/to/your/model"
+        volumeMounts:
+        - name: model-volume
+          mountPath: /path/to/your/model
+      volumes:
+      - name: model-volume
+        persistentVolumeClaim:
+          claimName: model-pvc
+      imagePullSecrets:
+      - name: regcred

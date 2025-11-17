@@ -1,0 +1,8 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'mlops-skeleton-project'
+    static_configs:
+      - targets: ['localhost:8000']  # Change this to the appropriate target for your application
+    metrics_path: '/metrics'  # Adjust this path if your application exposes metrics at a different endpoint

@@ -1,0 +1,35 @@
+stages:
+  - name: prepare
+    cmd: python src/data/make_dataset.py
+    deps:
+      - data/raw
+    outs:
+      - data/interim
+
+  - name: feature
+    cmd: python src/features/build_features.py
+    deps:
+      - data/interim
+    outs:
+      - data/processed
+
+  - name: train
+    cmd: python src/models/train_model.py
+    deps:
+      - data/processed
+    outs:
+      - models/model.pkl
+
+  - name: evaluate
+    cmd: python src/models/evaluate_model.py
+    deps:
+      - models/model.pkl
+    outs:
+      - metrics/evaluation_metrics.json
+
+  - name: predict
+    cmd: python src/models/predict_model.py
+    deps:
+      - models/model.pkl
+    outs:
+      - predictions/predictions.json

@@ -1,0 +1,34 @@
+general:
+  project_name: "MLOps Skeleton Project"
+  version: "0.1.0"
+  description: "A skeleton project for implementing MLOps practices in machine learning workflows."
+  author: "Your Name"
+  license: "MIT"
+
+data:
+  raw_data_path: "data/raw/"
+  interim_data_path: "data/interim/"
+  processed_data_path: "data/processed/"
+
+model:
+  model_name: "your_model_name"
+  model_version: "1.0"
+  metrics:
+    accuracy: 0.95
+    precision: 0.90
+    recall: 0.85
+
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  handlers:
+    - console
+    - file
+
+docker:
+  training_image: "your_dockerhub_username/mlops-training:latest"
+  serving_image: "your_dockerhub_username/mlops-serving:latest"
+
+experiment_tracking:
+  tracking_uri: "http://localhost:5000"
+  experiment_name: "mlops_experiment"
