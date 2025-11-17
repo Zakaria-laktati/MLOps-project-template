@@ -110,11 +110,7 @@ mlops-skeleton-project
 
 4. **Explore the notebooks:**
    - Open `notebooks/exploration.ipynb` for exploratory data analysis.
-
-## Support
-If you find this project helpful, consider supporting the developer by [buying them a coffee](https://www.buymeacoffee.com/zakarialaktati)!
-
-[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Donate-yellow.svg)](https://www.buymeacoffee.com/zakarialaktati)
+   - 
 
 5. **Contribute:**
    - Feel free to fork the repository and submit pull requests for improvements or additional features.
@@ -122,3 +118,8 @@ If you find this project helpful, consider supporting the developer by [buying t
 ## License
 
 This project is licensed under the MIT License. See the LICENSE file for more details.
+
+## Support
+If you find this project helpful, consider supporting the developer by [buying them a coffee](https://www.buymeacoffee.com/zakarialaktati)!
+
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Donate-yellow.svg)](https://www.buymeacoffee.com/zakarialaktati)
